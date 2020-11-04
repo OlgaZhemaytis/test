@@ -1,0 +1,56 @@
+* {
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+ }
+ .container {
+	max-width: 950px;
+	margin: 0 auto;
+}
+
+@import 'block/header';
+@import 'block/task';
+@import 'block/rangeform';
+@import 'block/button';
+
+@media screen and (max-width:991px){
+	.container {
+		max-width: 700px;
+		margin: 0 auto;
+	}
+}
+@media screen and (max-width:767px){
+	.container {
+		max-width: 540px;
+		margin: 0 auto;
+	}
+}
+@media screen and (max-width: 575px){
+	.container {
+		max-width: 90%;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	.header{
+		font-size: 20px;
+		&__line{
+			width: 80%;
+		}
+	}
+
+	.task{
+		padding: 0 15px;
+	}
+	.rangeform{
+		&__wrapper{
+			width: 85%;
+			padding: 30px 20px;
+		}
+		input[type=range]{
+			width: 83%;
+		}
+		&__result{
+			width: 220px;
+			font-size: 70px;
+		}
+	}
+}
